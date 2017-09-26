@@ -5,10 +5,10 @@ app.set('port', (process.env.PORT || 5000));
 
 
 app.get('/', function(request, response) {
-  //response.render('pages/index');
+ 
   response.json({
  "messages": [
-   {"text": "Welcome to the Rockets!"},
+   {"text": request.query.name},
    {"text": "What are you up to?"}
  ]
 });
