@@ -1,20 +1,18 @@
 var express = require('express');
 var app = express();
-const calc = require('./calc.js');
+var QALY = require('./calc.js');
 app.set('port', (process.env.PORT || 5000));
-var eq;
+
 
 
 app.get('/', function(request, response) {
  
- eq=calc.calculate(request.query.a1,request.query.a2,request.query.a3,request.query.a4,request.query.a5);
- 
- //store result in db
- var data=calc.getId(request.query.name,request.query.fbid,request.query.timestamp,request.query.location,request.query.a1,request.query.a2,request.query.a3,request.query.a4,request.query.a5,eq);
+ //QALY instance(Name,Location,Date,ans1,ans2,ans3,ans4,ans5)
+ //var myQALY = new QALY(request.query.Name,request.query.Location,request.query.Date,request.query.ans1,request.query.ans2,request.query.ans3,request.query.ans4,request.query.ans5);
  
   response.json({
  "messages": [
-   {"text": "your QOL is "+ eq},
+   {"text": "your QOL is "+ QALY(request.query.Name,request.query.Location,request.query.Date,request.query.ans1,request.query.ans2,request.query.ans3,request.query.ans4,request.query.ans5)},
    {"text": "Thanks!"}
  ]
 });
