@@ -9,7 +9,7 @@ app.get('/', function(request, response) {
   response.json({
  "messages": [
    {"text": request.query.name},
-   {"text": "What are you up to?"}
+   {"text": request.query.id}
  ]
 });
 });
