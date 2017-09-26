@@ -8,7 +8,7 @@ app.get('/', function(request, response) {
   //response.render('pages/index');
   response.json({
  "messages": [
-   {"text": "Welcome to the Chatfuel Rockets!"},
+   {"text": "Welcome to the Rockets!"},
    {"text": "What are you up to?"}
  ]
 });
