@@ -1,8 +1,8 @@
 {
-  "name": "gutbuddy",
+  "name": "mywebhook",
   "version": "0.1.0",
-  "description": "Facebook bot using api.ai",
-  "main": "webhook.js",
+  "description": "Facebook bot",
+  "main": "index.js",
   "scripts": {
     "start": "nf start",
     "test": "echo \"Error: no test specified\" && exit 1"
