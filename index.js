@@ -25,21 +25,23 @@ app.get('/Heartburn', function(request, response) {
   response.json({
  "messages": [
    {"text": responseText },
-   {"text": "TODO: send to Gut store for appropriate service" },
+   {"text": "" },
 	   
  ]
 });
 });
 //GET Handler Bloating
+//https://wh1.herokuapp.com/Bloating?a1=&a2=&a3=&a4=&a5=&a6=&a7=&a8=&a9=&a10=&a11=&a12=&a13=&a14=&a15=&Coelic=&Crohn=&antibio=&wtloss=&BldStl=&sympwake=&AGE=
+//http://localhost:5000/Bloating?b1=1&b2=1&b4=1&b5=1&b6=1&b7=1&b8=1&b9=1&b10=1&b11=1&b12=1&b13=1&b14=1&b15=1&b16=1
 app.get('/Bloating', function(request, response) {
  //generate score based response
- var responseText = BloatingHelper(parseInt(request.query.ans1),parseInt(request.query.ans2));
+ var responseText = BloatingHelper(request.query.b1,request.query.b2,request.query.b4,request.query.b5,request.query.b6,request.query.b7,request.query.b8,request.query.b9,request.query.b10,request.query.b11,request.query.b12,request.query.b13,request.query.b14,request.query.b15,request.query.b16);
 
  //display response
   response.json({
  "messages": [
    {"text": responseText },
-   {"text": "TODO: send to Gut store for appropriate service" },
+   {"text": "" },
 	   
  ]
 });
@@ -143,6 +145,21 @@ app.get('/Others', function(request, response) {
 });
 });
 
+//GET handler Bloating serious
+app.get('/Bloating/seedoc', function(request, response) {
+ 
+ //generate score based response
+ var responseText = "test";
+
+ //display response
+  response.json({
+ "messages": [
+   {"text": responseText },
+   {"text": "" },
+	   
+ ]
+});
+});
 
 //start server
 app.listen(app.get('port'), function() {
