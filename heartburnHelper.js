@@ -27,5 +27,5 @@ module.exports =function(v1,v2,v3,v4,v5,v6){
 	
 	var score = parseInt(v1)+parseInt(v2)+parseInt(v3)+parseInt(v4)+parseInt(v5)+parseInt(v6);
 		
-	return diag(score +"\n for free guidence and discounted services please visit our Gut-Buddy Store!");
+	return diag(score)+"\n for free guidence and discounted services please visit our Gut-Buddy Store!";
 	};
