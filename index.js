@@ -31,7 +31,7 @@ app.get('/Heartburn', function(request, response) {
 });
 });
 //GET Handler Bloating
-//https://wh1.herokuapp.com/Bloating?a1=&a2=&a3=&a4=&a5=&a6=&a7=&a8=&a9=&a10=&a11=&a12=&a13=&a14=&a15=&Coelic=&Crohn=&antibio=&wtloss=&BldStl=&sympwake=&AGE=
+//https://wh1.herokuapp.com/Bloating?b1={{bl1}}&b2={{b2}}&b4={{bl4}}&b5={{bl5}}&b6={{bl6}}&b7={{bl7}}&b8={{bl8}}&b9={{bl9}}&b10{{bl10}}&b11{{bl11}}&b12{{bl12}}&b13={{bl13}}&b14={{bl14}}&b15={{bl15}}&b16={{bl16}}
 //http://localhost:5000/Bloating?b1=1&b2=1&b4=1&b5=1&b6=1&b7=1&b8=1&b9=1&b10=1&b11=1&b12=1&b13=1&b14=1&b15=1&b16=1
 app.get('/Bloating', function(request, response) {
  //generate score based response
