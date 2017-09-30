@@ -60,7 +60,7 @@ app.get('/Constipation', function(request, response) {
   response.json({
  "messages": [
    {"text": responseText },
-   {"text": "TODO: send to Gut store for appropriate service" },
+   {"text": "" },
 	   
  ]
 });
