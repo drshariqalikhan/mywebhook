@@ -154,13 +154,8 @@ app.get('/Others', function(request, response) {
 
 app.post('/',function(req,res){
 	var responseText = req.body;
-	 res.json({
- 			"messages": [
-   			{"text": responseText },
-   			{"text": "--" },
-	   
- 			]});
-	//res.send('done!');
+	 //res.json({"messages": [{"text": responseText },{"text": "--" }]});
+	 res.send(responseText);
 });
 
 //start server
