@@ -9,9 +9,9 @@ const DiarrhoeaHelper= require('./DiarrhoeaHelper.js');
 const FeverHelper= require('./FeverHelper.js');
 const GutHealthHelper= require('./GutHealthHelper.js');
 const OthersHelper= require('./OthersHelper.js');
-
+const bp = require('body-parser');
 app.set('port', (process.env.PORT || 5000));
-
+app.use(bp.urlencoded({extended: true}));
 
 //GET Handler Heartburn
 //http://localhost:5000/Heartburn?ans1=1&ans2=2
@@ -152,10 +152,16 @@ app.get('/Others', function(request, response) {
 
 //handle post req
 
-app.post('/',function(req,res){
-	var responseText = req.body;
-	 //res.json({"messages": [{"text": responseText },{"text": "--" }]});
-	 res.json(responseText);
+app.post('/user',function(req,res){
+	var responseText = req.body.gender;
+	//display response
+  res.json({
+ "messages": [
+   {"text": responseText },
+   {"text": "" },
+	   
+ ]
+});
 });
 
 //start server
